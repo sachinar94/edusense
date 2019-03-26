@@ -1,0 +1,44 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-lactures-heading">Create or edit a Lactures</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_classId">Class Id</label>
+                    <input type="number" class="form-control" name="classId" id="field_classId"
+                        [(ngModel)]="lactures.classId" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_timeFrom">Time From</label>
+                    <input type="text" class="form-control" name="timeFrom" id="field_timeFrom"
+                        [(ngModel)]="lactures.timeFrom" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_timeTo">Time To</label>
+                    <input type="text" class="form-control" name="timeTo" id="field_timeTo"
+                        [(ngModel)]="lactures.timeTo" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_startDate">Start Date</label>
+                    <div class="input-group">
+                        <input id="field_startDate" type="text" class="form-control" name="startDate" ngbDatepicker  #startDateDp="ngbDatepicker" [(ngModel)]="lactures.startDate"
+                        />
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="startDateDp.toggle()"><fa-icon [icon]="'calendar-alt'"></fa-icon></button>
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

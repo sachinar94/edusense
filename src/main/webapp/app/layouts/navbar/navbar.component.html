@@ -1,7 +1,7 @@
 <nav class="navbar navbar-dark navbar-expand-md bg-dark">
     <a class="navbar-brand logo" routerLink="/" (click)="collapseNavbar()">
         <span class="logo-img"></span>
-        <span class="navbar-title">Edusense</span> <span class="navbar-version">{{version}}</span>
+        <span class="navbar-title">Edusense</span>
     </a>
     <a class="navbar-toggler d-lg-none" href="javascript:void(0);" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" (click)="toggleNavbar()">
         <fa-icon icon="bars"></fa-icon>
@@ -16,8 +16,21 @@
                     </span>
                 </a>
             </li>
+
+            <li *ngSwitchCase="true" class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                <a class="nav-link" routerLink="classes" (click)="collapseNavbar()">
+                    <i class="fa fa-hand-spock-o" aria-hidden="true"></i>
+                    <span>Classes</span>
+                </a>
+            </li>
+            <li  *ngSwitchCase="true" class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                <a class="nav-link" routerLink="lactures" (click)="collapseNavbar()">
+                    <i class="fa fa-hand-spock-o" aria-hidden="true"></i>
+                    <span>Lactures</span>
+                </a>
+            </li>
             <!-- jhipster-needle-add-element-to-menu - JHipster will add new menu items here -->
-            <li *ngSwitchCase="true" ngbDropdown class="nav-item dropdown pointer" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+            <li *jhiHasAnyAuthority="'ROLE_ADMIN'" ngbDropdown class="nav-item dropdown pointer" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
                 <a class="nav-link dropdown-toggle" ngbDropdownToggle href="javascript:void(0);" id="entity-menu">
                     <span>
                         <fa-icon icon="th-list"></fa-icon>
@@ -27,6 +40,18 @@
                     </span>
                 </a>
                 <ul class="dropdown-menu" ngbDropdownMenu aria-labelledby="entity-menu">
+                    <li>
+                        <a class="dropdown-item" routerLink="lactures" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">
+                            <fa-icon icon="asterisk" fixedWidth="true"></fa-icon>
+                            <span>Lactures</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" routerLink="classrooms" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">
+                            <fa-icon icon="asterisk" fixedWidth="true"></fa-icon>
+                            <span>Classrooms</span>
+                        </a>
+                    </li>
                     <!-- jhipster-needle-add-entity-to-menu - JHipster will add entities to the menu here -->
                 </ul>
             </li>

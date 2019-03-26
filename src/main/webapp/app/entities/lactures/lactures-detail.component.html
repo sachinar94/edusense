@@ -1,0 +1,39 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="lactures">
+            <h2><span>Lactures</span> {{lactures.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Class Id</span></dt>
+                <dd>
+                    <span>{{lactures.classId}}</span>
+                </dd>
+                <dt><span>Time From</span></dt>
+                <dd>
+                    <span>{{lactures.timeFrom}}</span>
+                </dd>
+                <dt><span>Time To</span></dt>
+                <dd>
+                    <span>{{lactures.timeTo}}</span>
+                </dd>
+                <dt><span>Start Date</span></dt>
+                <dd>
+                    <span>{{lactures.startDate}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/lactures', lactures.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

@@ -18,8 +18,10 @@ import { EdusenseHomeModule } from './home/home.module';
 import { EdusenseAccountModule } from './account/account.module';
 import { EdusenseEntityModule } from './entities/entity.module';
 import * as moment from 'moment';
+import { EdusenseAppClassesModule } from './classes/classes.module';
 // jhipster-needle-angular-add-module-import JHipster will add new module here
 import { JhiMainComponent, NavbarComponent, FooterComponent, PageRibbonComponent, ErrorComponent } from './layouts';
+import { ClassesComponent } from './classes/classes.component';
 
 @NgModule({
     imports: [
@@ -34,6 +36,7 @@ import { JhiMainComponent, NavbarComponent, FooterComponent, PageRibbonComponent
         EdusenseCoreModule,
         EdusenseHomeModule,
         EdusenseAccountModule,
+        EdusenseAppClassesModule,
         // jhipster-needle-angular-add-module JHipster will add new module here
         EdusenseEntityModule,
         EdusenseAppRoutingModule

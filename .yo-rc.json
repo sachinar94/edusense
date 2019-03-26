@@ -1,34 +1,34 @@
 {
-  "generator-jhipster": {
-    "promptValues": {
-      "packageName": "com.usense.edusense"
-    },
-    "jhipsterVersion": "5.8.2",
-    "applicationType": "monolith",
-    "baseName": "edusense",
-    "packageName": "com.usense.edusense",
-    "packageFolder": "com/usense/edusense",
-    "serverPort": "8080",
-    "authenticationType": "jwt",
-    "cacheProvider": "ehcache",
-    "enableHibernateCache": false,
-    "websocket": false,
-    "databaseType": "sql",
-    "devDatabaseType": "mysql",
-    "prodDatabaseType": "mysql",
-    "searchEngine": false,
-    "messageBroker": false,
-    "serviceDiscoveryType": false,
-    "buildTool": "maven",
-    "enableSwaggerCodegen": false,
-    "jwtSecretKey": "NmJkZTBiOGIwY2YxOTIyYzk3NmI1ZWFmZTk0MzU2ODE2ODNmNzk1N2ZhOWNjNmY1MDkwODcwOTg5NDg5YzNkNmJiZTQxN2NkNjU3ZDZlZWRiMzQ1MjI1NTUwNDRjMDFjMjI5ZjFkYWM5ZDUyYzk4N2UyZWYyMzhhOTIxZTY2YmU=",
-    "clientFramework": "angularX",
-    "useSass": false,
-    "clientPackageManager": "npm",
-    "jhiPrefix": "jhi",
-    "entitySuffix": "",
-    "dtoSuffix": "DTO",
-    "otherModules": [],
-    "enableTranslation": false
-  }
+    "generator-jhipster": {
+        "promptValues": {
+            "packageName": "com.usense.edusense"
+        },
+        "jhipsterVersion": "5.8.2",
+        "applicationType": "monolith",
+        "baseName": "edusense",
+        "packageName": "com.usense.edusense",
+        "packageFolder": "com/usense/edusense",
+        "serverPort": "8080",
+        "authenticationType": "jwt",
+        "cacheProvider": "ehcache",
+        "enableHibernateCache": false,
+        "websocket": false,
+        "databaseType": "sql",
+        "devDatabaseType": "mysql",
+        "prodDatabaseType": "mysql",
+        "searchEngine": false,
+        "messageBroker": false,
+        "serviceDiscoveryType": false,
+        "buildTool": "maven",
+        "enableSwaggerCodegen": false,
+        "jwtSecretKey": "NmJkZTBiOGIwY2YxOTIyYzk3NmI1ZWFmZTk0MzU2ODE2ODNmNzk1N2ZhOWNjNmY1MDkwODcwOTg5NDg5YzNkNmJiZTQxN2NkNjU3ZDZlZWRiMzQ1MjI1NTUwNDRjMDFjMjI5ZjFkYWM5ZDUyYzk4N2UyZWYyMzhhOTIxZTY2YmU=",
+        "clientFramework": "angularX",
+        "useSass": false,
+        "clientPackageManager": "npm",
+        "jhiPrefix": "jhi",
+        "entitySuffix": "",
+        "dtoSuffix": "DTO",
+        "otherModules": [],
+        "enableTranslation": false
+    }
 }

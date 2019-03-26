@@ -1,0 +1,31 @@
+{
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "classId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "timeFrom",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "timeTo",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "startDate",
+            "fieldType": "LocalDate"
+        }
+    ],
+    "changelogDate": "20190326125849",
+    "dto": "mapstruct",
+    "searchEngine": false,
+    "service": "serviceImpl",
+    "entityTableName": "lactures",
+    "databaseType": "sql",
+    "jpaMetamodelFiltering": false,
+    "pagination": "no"
+}
